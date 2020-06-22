@@ -650,6 +650,9 @@ def scan_host(target, concurrent_scans, outdir):
         lootdir = os.path.abspath(os.path.join(basedir, 'loot'))
         os.makedirs(lootdir, exist_ok=True)
 
+        privescdir = os.path.abspath(os.path.join(basedir, 'privesc'))
+        os.makedirs(privescdir, exist_ok=True)
+
         reportdir = os.path.abspath(os.path.join(basedir, 'report'))
         target.reportdir = reportdir
         os.makedirs(reportdir, exist_ok=True)
@@ -878,4 +881,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
